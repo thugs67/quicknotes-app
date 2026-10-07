@@ -1,0 +1,47 @@
+:root {
+  --bg-color: #145f91;
+  --card-bg: #c80f0f;
+  --text-color: #3c4047;
+  --heading-color: #cbe714;
+  --meta-color: #2767c6;
+  --border-color: #122f4e;
+  
+  --primary-color: #3182ce;
+  --primary-hover: #2b6cb0;
+  
+  --warning-color: #dd6b20; /* Orange for approaching character limit */
+  --error-color: #e53e3e;   /* Red for exceeding character limit */
+}
+
+body.dark {
+  --bg-color: #a7ef09;
+  --card-bg: #352810;
+  --text-color: #3a2d2d;
+  --heading-color: #5ce50d;
+  --meta-color: #7aba68;
+  --border-color: #206aeb;
+  
+  --primary-color: #4299e1;
+  --primary-hover: #3182ce;
+  
+  --warning-color: #ed8936;
+  --error-color: #fc8181;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Approaching limit: orange text */
+#char-count.warning {
+  color: var(--warning-color);
+  font-weight: 600;
+}
+
+/* Exceeded limit: red, bold text */
+#char-count.over {
+  color: var(--error-color);
+  font-weight: 700;
+}
