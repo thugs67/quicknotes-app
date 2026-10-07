@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Toolkit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script2.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Notes Toolkit</h1>
+  </header>
+
+  <main>
+    // Section 1: Note Creation Form 
+
+    <section>
+      <h2>Add New Note</h2>
+      <form id="note-form">
+        <p id="error-message" style="color: rgb(47, 163, 57);"></p>
+
+        <div>
+          <label for="note-input">Note Content:</label>
+          <input type="text" id="note-input" placeholder="Type your note here..." required>
+        </div>
+
+        <div>
+          <label for="note-category">Category:</label>
+          <select id="note-category" required>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+          </select>
+        </div>
+
+        <button type="submit">Add Note</button>
+      </form>
+    </section>
+
+    // Section 2: Notes Display and Search
+
+    <section>
+      <h2>Your Notes</h2>
+
+      <div>
+        <label for="search-input">Search Notes:</label>
+        <input type="search" id="search-input" placeholder="Search by keyword...">
+      </div>
+
+      <p id="note-count">0 notes</p>
+
+      <ul id="notes-list">
+        <!-- Notes will be dynamically rendered here -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Notes Toolkit App</p>
+  </footer>
+
+</body>
+</html>
